@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
+import { useVariableValue } from '@devcycle/react-client-sdk'
 
 export const meta: MetaFunction = () => {
   return [
@@ -8,9 +9,12 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
+    const variable = useVariableValue('test-new-feature', false)
+    console.log("Variable Value on " + (typeof window === 'undefined' ? 'server' : 'client') + " ", variable)
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
       <h1>Welcome to Remix</h1>
+        <h2>DevCycle Variable Value: {JSON.stringify(variable)}</h2>
       <ul>
         <li>
           <a

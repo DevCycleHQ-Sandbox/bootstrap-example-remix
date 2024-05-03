@@ -7,4 +7,9 @@ installGlobals();
 
 export default defineConfig({
   plugins: [remix(), tsconfigPaths()],
+    build: {
+        rollupOptions: {
+            external: ['@openfeature/server-sdk']
+        }
+    }
 });
