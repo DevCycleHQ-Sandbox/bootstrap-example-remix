@@ -1,36 +1,23 @@
-# Welcome to Remix + Vite!
+# DevCycle Bootstrapping with Remix Example
 
-📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/guides/vite) for details on supported features.
+This is an example of how to use DevCycle with Remix. It uses a combination of the DevCycle Node.js SDK on the server and the DevCycle React SDK
+on the client. The Node SDK retrieves a configuration to be used for client-side bootstrapping. 
+
+To see the bootstrapping process, check out [root.tsx](./app/root.tsx).
+
+For more information on how to use bootstrapping, see our guide in the [DevCycle Docs](https://docs.devcycle.com/sdk/server-side-sdks/node/node-bootstrapping).
+
+## Setup
+Install the dependencies using npm or yarn
+`npm install`
+`yarn`
+
+Set the environment variable `DEVCYCLE_SERVER_SDK_KEY` to your DevCycle Server SDK Key.
 
 ## Development
 
 Run the Vite dev server:
 
 ```shellscript
-npm run dev
+yarn dev
 ```
-
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
